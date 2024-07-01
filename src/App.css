@@ -60,3 +60,68 @@ nav h2 {
   right: 3em;
   color: #fff;
 }
+
+
+/* HOME */
+#home {
+  display: flex;
+  height: 900px;
+  background-color: rgb(247, 243, 231);
+}
+
+#home-text {
+  position: relative;
+  top: 12.5em;
+  left: 4em;
+  width: 45%;
+}
+
+#home-h3 {
+  background-color: #f43127;
+  color: #fff;
+  font-size: 18px;
+  width: 14.7em;
+  padding: .6em .8em;
+}
+
+#home-h1 {
+  font-size: 72px;
+  text-transform: uppercase;
+  margin: .5em 0;
+}
+
+.home-li {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: .8px;
+  line-height: 40px;
+}
+
+#home-btn {
+  position: relative;
+  top: 2em;
+  height: 3.5em;
+  width: 11em;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #fcb302;
+  border: none;
+  border-radius: 5em;
+  transition: all .2s ease-out;
+}
+
+#home-btn:hover {
+  background-color: #f43127;
+  color: #181818;
+}
+
+#home-pizza {
+  position: relative;
+  top: 8em;
+  right: 1.7em;
+  width: 762px;
+  height: 629px;
+}
