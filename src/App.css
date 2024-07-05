@@ -192,3 +192,132 @@ nav h2 {
   display: flex;
   bottom: px;
 }
+
+
+/* OFFERS */
+#offers-section {
+  position: relative;
+  top: 1em;
+  text-align: center;
+  height: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#offers-h3 {
+  color: #f43127;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#offers-h1 {
+  position: relative;
+  bottom: .2em;
+  font-size: 40px;
+}
+
+#filter-btns-div {
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+}
+
+.filter-btn {
+  padding: .7em 1.5em;
+  background-color: transparent;
+  border: 1px solid #b4b4b4;
+  border-radius: 5em;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600; 
+}
+
+.offer-card {
+  padding: 2.2em .6em .7em;
+  height: 23.3em;
+  width: 15em;
+  border: 1px solid #b4b4b4;
+  border-radius: 15px;
+}
+
+.offer-card-img {
+  width: 84%;
+}
+
+.offer-card-h2 {
+  text-align: left;
+  padding-left: .8em;
+}
+
+.offer-card-p {
+  position: relative;
+  bottom: 5px;
+  height: 40px;
+  width: 88%;
+  text-align: left;
+  padding-left: 1.25em;
+}
+
+.offer-card-price {
+  position: relative;
+  bottom: 4px;
+  right: .9em;
+  text-align: right;
+  color: #f43127;
+}
+
+#offers-container {
+  position: relative;
+  top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 45px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.offers-bg {
+ position: absolute;
+}
+
+.hotdog-bg {
+  top: -2.5em;
+  left: -3em;
+}
+
+.pizza-bg {
+  right: -2em;
+  top: 25em;
+}
+
+.fries-bg {
+  top: 42em;
+  left: -5em;
+}
+
+.fries-two-bg {
+  top: 22em;
+  left: 32em;
+}
+
+.hotdog-two-bg {
+  top: 8em;
+  left: 52em;
+}
+
+.pizza-two-bg {
+  top: 52em;
+  left: 13em;
+  rotate: 20deg;
+}
+
+
+/* QUALITY CONTAINER */
+#quality-container {
+  background-image: url("images/quality-bg.jpg");
+  background-position: center;
+  background-size: auto;
+  background-attachment: fixed;
+  background-color: aqua;
+  height: 565px;
+}
