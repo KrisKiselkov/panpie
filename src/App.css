@@ -434,3 +434,54 @@ nav h2 {
   border-radius: 5em;
   transition: all .2s ease-out;
 }
+
+#king-burger-section {
+  display: flex;
+  align-items: center;
+  background-image: url("images/king-burger-bg.jpg");
+  height: 604px;
+  padding: 0em 5em;
+}
+
+#king-burger-txt {
+  position: relative;
+  width: 45%;
+}
+
+#king-burger-h1 {
+  font-size: 60px;
+  line-height: 58px;
+}
+
+#king-burger-p {
+  position: relative;
+  bottom: 1.2em;
+  color: #646464;
+  width: 95%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+#king-burger-btn {
+  position: relative;
+  height: 3.5em;
+  width: 11em;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #fcb302;
+  border: none;
+  border-radius: 5em;
+  transition: all .2s ease-out;
+}
+
+#king-burger-img {
+  width: 55%;
+}
+
+#burger-img {
+  width: 105%;
+}

@@ -1,5 +1,6 @@
 import { ChoiceCards } from "./Choice-Cards";
 import { Home } from "./Home";
+import { KingBurger } from "./King-Burger";
 import { KnowMore } from "./Know-More";
 import { Nav } from "./Nav";
 import { Offers } from "./Offers";
@@ -20,6 +21,8 @@ export function Landing() {
             <QualityContainer />
 
             <KnowMore />
+
+            <KingBurger />
         </>
     );
 }
