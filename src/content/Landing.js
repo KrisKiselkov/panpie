@@ -5,6 +5,7 @@ import { KnowMore } from "./Know-More";
 import { Nav } from "./Nav";
 import { Offers } from "./Offers";
 import { QualityContainer } from "./Quality-Container";
+import { Statistics } from "./Statistics";
 
 
 export function Landing() {
@@ -23,6 +24,8 @@ export function Landing() {
             <KnowMore />
 
             <KingBurger />
+
+            <Statistics />
         </>
     );
 }
