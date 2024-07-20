@@ -1,0 +1,9 @@
+
+
+export function Testimonials() {
+    return(
+        <section id="testimonials-section">
+            
+        </section>
+    );
+}
