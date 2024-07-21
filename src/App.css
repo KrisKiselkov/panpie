@@ -543,3 +543,74 @@ nav h2 {
   font-weight: 500;
   text-align: center;
 }
+
+
+/* TESTIMONIALS */
+#testimonials-section {
+  height: 40em;
+}
+
+#testimonials-container {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#testimonials-img-container {
+  width: 50%;
+}
+
+#main-test-img {
+  width: 96%;
+}
+
+#testimonials-div {
+  width: 50%;
+  padding-top: 6.3em;
+}
+
+#test-h3 {
+  position: relative;
+  left: 4.15em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f43127;
+  font-size: 16px;
+  width: 9em;
+}
+
+#test-h2 {
+  position: relative;
+  left: 1.65em;
+  font-size: 40px;
+  line-height: 0px;
+  width: 10em;
+  
+}
+
+.test-p {
+  position: relative;
+  left: 3.7em;
+  top: 1em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  font-style: italic;
+  color: #646464;
+  width: 85%; 
+}
+
+.test-per {
+  position: relative;
+  top: 1.5em;
+  left: 4em;
+}
+
+.test-h3-per {
+  position: relative;
+  bottom: .5em;
+  color: #646464;
+  font-weight: 400;
+  font-style: italic;
+}

@@ -6,6 +6,7 @@ import { Nav } from "./Nav";
 import { Offers } from "./Offers";
 import { QualityContainer } from "./Quality-Container";
 import { Statistics } from "./Statistics";
+import { Testimonials } from "./Testimonials";
 
 
 export function Landing() {
@@ -26,6 +27,8 @@ export function Landing() {
             <KingBurger />
 
             <Statistics />
+
+            <Testimonials />
         </>
     );
 }
