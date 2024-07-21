@@ -5,6 +5,7 @@ import { KnowMore } from "./Know-More";
 import { Nav } from "./Nav";
 import { Offers } from "./Offers";
 import { QualityContainer } from "./Quality-Container";
+import { QuickChoice } from "./Quick-Choice";
 import { Statistics } from "./Statistics";
 import { Testimonials } from "./Testimonials";
 
@@ -29,6 +30,8 @@ export function Landing() {
             <Statistics />
 
             <Testimonials />
+
+            <QuickChoice />
         </>
     );
 }
