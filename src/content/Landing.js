@@ -3,6 +3,7 @@ import { Home } from "./Home";
 import { KingBurger } from "./King-Burger";
 import { KnowMore } from "./Know-More";
 import { Nav } from "./Nav";
+import { NewsBlog } from "./News&Blog";
 import { Offers } from "./Offers";
 import { QualityContainer } from "./Quality-Container";
 import { QuickChoice } from "./Quick-Choice";
@@ -32,6 +33,8 @@ export function Landing() {
             <Testimonials />
 
             <QuickChoice />
+
+            <NewsBlog />
         </>
     );
 }
