@@ -8,6 +8,7 @@ import { Offers } from "./Offers";
 import { QualityContainer } from "./Quality-Container";
 import { QuickChoice } from "./Quick-Choice";
 import { Statistics } from "./Statistics";
+import { Supporters } from "./Supporters";
 import { Testimonials } from "./Testimonials";
 
 
@@ -35,6 +36,8 @@ export function Landing() {
             <QuickChoice />
 
             <NewsBlog />
+
+            <Supporters />
         </>
     );
 }

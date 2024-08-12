@@ -669,7 +669,7 @@ nav h2 {
 
 /* NEWS & BLOG */
 #news-blog-section {
-  height: 65em;
+  height: 73em;
   background-color: #f7f7f7;
 }
 
@@ -748,4 +748,19 @@ nav h2 {
   font-weight: 600;
   color: #646464;
   text-transform: uppercase;
+}
+
+
+/* SUPPORTERS */
+#supporters-section {
+  height: 27em;
+  width: 100%;
+  color: #fff;
+}
+
+#supporters-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 15em;
 }
