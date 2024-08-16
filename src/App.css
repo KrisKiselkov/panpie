@@ -751,9 +751,75 @@ nav h2 {
 }
 
 
+#delivery-hero {
+  position: relative;
+  bottom: 7.8em;
+  height: 15.6em;
+  width: 90%;
+  background-color: #f80000;
+  margin: 0 auto;
+  border-radius: 0px 50px 0px 50px;
+}
+
+#delivery-hero-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("./images/delivery-bg.png");
+  background-position: center;
+  opacity: .30;
+  border-radius: 0px 50px 0px 50px;
+}
+
+#delivery-hero-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#delivery-img {
+  position: relative;
+  bottom: 2em;
+}
+
+#delivery-txt {
+  position: relative;
+  width: 27em;
+  top: 2.4em;
+  left: 1em;
+}
+
+#delivery-h2 {
+  font-size: 40px;
+  color: #fff;
+  line-height: 25px;
+}
+
+#delivery-p {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#delivery-phone {
+  position: relative;
+  top: 2.7em;
+  left: 1.5em;
+  background-color: #fcb302;
+  color: #fff;
+  opacity: 1;
+  height: fit-content;
+  padding: .35em 1.3em;
+  border-radius: 50px;
+  z-index: 5;
+  font-size: 28px;
+}
+
+
+
 /* SUPPORTERS */
 #supporters-section {
-  height: 27em;
+  height: 12em;
   width: 100%;
   color: #fff;
 }
@@ -762,5 +828,5 @@ nav h2 {
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: 15em;
+  top: 2em;
 }
