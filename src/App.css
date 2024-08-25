@@ -14,7 +14,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(247, 243, 231);
+  background-color: transparent;
   height: 110px;  
   z-index: 500;
   transition: all .2s ease-in-out;
@@ -22,7 +22,7 @@ header {
 }
 
 header.sticky {
-  background-color: #fff;
+  background-color: rgb(247, 243, 231);
 }
 
 nav {
@@ -30,6 +30,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all .2s ease-out;
 }
 
 #logo {
@@ -829,4 +830,126 @@ nav h2 {
   justify-content: space-around;
   position: relative;
   top: 2em;
+}
+
+
+
+/* MENU PAGE */
+#menu-section {
+  height: auto;
+}
+
+#menu-header {
+  position: absolute;
+  width: 100%;
+  background-image: url("./content/menu-content/menu-images/menu-banner.png");
+  background-position: 100%;
+  height: 450px;
+}
+
+#menu-h1 {
+  position: relative;
+  top: 4.5em;
+  text-align: center;
+  font-size: 40px;
+}
+
+.nav-bc {
+  position: relative;
+  right: 1.2em;
+  top: 10em;
+  text-align: center;
+  list-style: none;
+}
+
+.li-bc {
+  display: inline;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.li-bc a {
+  color: #929292;
+  text-decoration: none;
+}
+
+.li-bc a:hover {
+  color: #f43127;
+}
+
+.li-bc-active {
+  color: #f43127;
+}
+
+.li-bc+.li-bc::before {
+  content: " - ";
+  color: #929292;
+}
+
+#menu-main {
+  position: relative;
+  top: 29em;
+  width: 100%;
+  height: 500px;
+  background-color: #f43127;
+}
+
+#menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 89%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #181818;
+}
+
+#menu-filter-col {
+  background-color: #fff;
+}
+
+#menu-filter-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#menu-search-div {
+  background-color: #646464;
+  width: 100%;
+  height: 3.6em;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#menu-search-div:active {
+  border: 1px solid #f43127;
+}
+
+#menu-search {
+  outline: none;
+  border: none;
+  width: 80%;
+  height: 100%;
+  padding-left: .8em;
+  font-size: 18px;
+}
+
+#menu-products-col {
+  background-color: #646464;
+}
+
+#menu-categories-div {
+  position: relative;
+  top: 1.8em;
+  width: 100%;
+}
+
+#menu-filter-categories {
+  
+}
+
+#categories-h2 {
+  padding-bottom: .8em;
+  border-bottom: 2px dashed #cccccc;
 }
