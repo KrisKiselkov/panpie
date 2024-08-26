@@ -4,55 +4,63 @@ export const menu = [
         image: require("../images/bbq-pizza.png"),
         label: "BBQ Pizza",
         ingredients: 'Gorgonzola, mozzarella, Red onions, capers, olives',
-        price: 16.49
+        price: 16.49,
+        category: 'pizza'
     },
     {
         type: "fries",
         image: require("../images/fries.png"),
         label: "French Fries",
         ingredients: "French Fries, Garlic Sauce, Salt",
-        price: 4.99
+        price: 4.99,
+        category: 'fries'
     },
     {
         type: "burger",
         image: require("../images/beef-burger.png"),
         label: "King Beef Burger",
         ingredients: "Beef Patty, Tomatoes, Mayo, Lettuce, Cheese",
-        price: 4.99
+        price: 4.99,
+        category: 'burger'
     },
     {
         type: "drinks",
         image: require("../images/cola.png"),
         label: "Coca Cola",
         ingredients: "Coca Cola",
-        price: 2.49
+        price: 2.49,
+        category: 'drinks'
     },
     {
         type: "pizza",
         image: require("../images/burger-pizza.png"),
         label: "Burger Kingo",
         ingredients: 'Gorgonzola, Mozzarella, Red Onions, Capers, Olives',
-        price: 15.49
+        price: 15.49,
+        category: 'pizza'
     },
     {
         type: "pizza",
         image: require("../images/quattro-formaggi.png"),
         label: "Quattro Formaggi",
         ingredients: 'Gorgonzola, Mozzarella, Feta Cheese, Cheese',
-        price: 14.99
+        price: 14.99,
+        category: 'pizza'
     },
     {
         type: "sandwich",
         image: require("../images/chicken-sandwich.png"),
         label: "Pollo Sandwich",
         ingredients: 'Chicken, Lettuce, Tomatoes, Cheese, Olives',
-        price: 8.49
+        price: 8.49,
+        category: 'sandwich'
     },
     {
         type: "sandwich",
         image: require("../images/triangle-sandwich.png"),
         label: "Geometry Sandwich",
         ingredients: 'Ham, Cheese, Tomatoes, Lettuce',
-        price: 9.49
+        price: 9.49,
+        category: 'sandwich'
     }
 ]
