@@ -888,19 +888,18 @@ nav h2 {
 
 #menu-main {
   position: relative;
-  top: 29em;
+  top: 34em;
   width: 100%;
-  height: 1000px;
-  background-color: #f43127;
+  height: 1800px;
 }
 
 #menu-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30% 66.2%;
+  gap: 3em;
   width: 89%;
   height: 100%;
   margin: 0 auto;
-  background-color: #181818;
 }
 
 #menu-filter-col {
@@ -914,29 +913,23 @@ nav h2 {
 }
 
 #menu-search-div {
-  background-color: #646464;
   width: 100%;
-  height: 3.6em;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
+  height: 3.6em;  
   overflow: hidden;
-}
-
-#menu-search-div:active {
-  border: 1px solid #f43127;
 }
 
 #menu-search {
   outline: none;
-  border: none;
-  width: 80%;
+  border: 1px solid #e0e0e0;
+  width: 100%;
   height: 100%;
-  padding-left: .8em;
+  padding: 0 50px 0 20px;
   font-size: 18px;
+  border-radius: 10px;
 }
 
-#menu-products-col {
-  background-color: #646464;
+#menu-search:focus {
+  border-color: #f43127;
 }
 
 #menu-categories-div {
@@ -950,8 +943,9 @@ nav h2 {
 }
 
 .menu-col-h2 {
+  font-size: 22px;
   padding-bottom: .8em;
-  border-bottom: 2px dashed #cccccc;
+  border-bottom: 2px dashed #e0e0e0;
 }
 
 #menu-all-categories {
@@ -969,7 +963,7 @@ nav h2 {
   position: absolute;
   height: 1px;
   width: 100%;
-  background-color: #cccccc;
+  background-color: #e0e0e0;
 }
 
 .category-order-setting {
@@ -1030,11 +1024,59 @@ nav h2 {
 
 .menu-deal {
   display: flex;
-  height: 9em;
+  height: 6.38em;
   width: 100%;
-  background-color: aqua;
+  margin-bottom: .5em;
 }
 
 .menu-deal-img {
   object-fit: contain;
+  width: 25%;
+}
+
+.menu-deal-txt {
+  position: relative;
+  left: .9em;
+}
+
+.menu-deal-p span {
+  color: #f80000;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.menu-deal-h3 {
+  font-size: 18px;
+}
+
+#menu-poster-img {
+  position: relative;
+  top: 4.5em;
+}
+
+#menu-products-col {
+  background-color: ;
+}
+
+#menu-products-header {
+  position: relative;
+  top: -1.1em;
+  width: 100%;
+  height: 4.5em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+#menu-products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px 0px;
+}
+
+.menu-product {
+  height: 28em;
+  width: 23em;
+  background-color: #f43127;
 }

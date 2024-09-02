@@ -15,7 +15,21 @@ export function Menu() {
                     <img src={deal.image} className='menu-deal-img'></img>
                     <div className='menu-deal-txt'>
                         <h3 className='menu-deal-h3'>{deal.label}</h3>
-                        <p className='menu-deal-p'>{deal.price}</p>
+                        <p className='menu-deal-p'><span>${deal.smallPrice} </span>-<span> ${deal.largePrice}</span></p>
+                    </div>
+                </div>
+            ))
+        )
+    }
+
+    const menuProducts = () => {
+        return (
+            menu.map(product => (
+                <div className='menu-product'>
+                    <img src={product.image} className='m-p-img'></img>
+                    <div className='m-p-txt'>
+                        <h2 className='m-p-h2'>{product.label}</h2>
+                        <p className='m-p-p'>{product.ingredients}</p>
                     </div>
                 </div>
             ))
@@ -110,11 +124,21 @@ export function Menu() {
 
                                     {bestDeals()}
                                 </div>
+
+                                <img src={require("./menu-images/menu-poster.jpg")} id='menu-poster-img'></img>
                             </div>
                         </div>
 
                         <div id="menu-products-col">
-                            
+                            <div id='menu-products-header'>
+                                <h3 id='m-p-h3'>Showing all 4 results</h3>
+
+
+                            </div>
+
+                            <section id='menu-products-container'>
+                                {menuProducts()}
+                            </section>
                         </div>
                     </div>
                 </section>

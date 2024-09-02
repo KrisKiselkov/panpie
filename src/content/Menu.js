@@ -4,7 +4,9 @@ export const menu = [
         image: require("../images/bbq-pizza.png"),
         label: "BBQ Pizza",
         ingredients: 'Gorgonzola, mozzarella, Red onions, capers, olives',
-        price: 16.49,
+        price: 14.49,
+        smallPrice: 9.99,
+        largePrice: 18.99, 
         category: 'pizza'
     },
     {
@@ -12,15 +14,37 @@ export const menu = [
         image: require("../images/fries.png"),
         label: "French Fries",
         ingredients: "French Fries, Garlic Sauce, Salt",
-        price: 4.99,
+        price: 6.99,
+        smallPrice: 4.99,
+        largePrice: 7.99, 
         category: 'fries'
+    },
+    {
+        type: "pizza",
+        image: require("../images/burger-pizza.png"),
+        label: "Burger Kingo",
+        ingredients: 'Gorgonzola, Mozzarella, Red Onions, Capers, Olives',
+        price: 15.49,
+        smallPrice: 10.49,
+        largePrice: 19.99, 
+        category: 'pizza'
+    },
+    {
+        type: "pizza",
+        image: require("../images/quattro-formaggi.png"),
+        label: "Quattro Formaggi",
+        ingredients: 'Gorgonzola, Mozzarella, Feta Cheese, Cheese',
+        price: 14.99,
+        smallPrice: 9.99,
+        largePrice: 18.99, 
+        category: 'pizza'
     },
     {
         type: "burger",
         image: require("../images/beef-burger.png"),
         label: "King Beef Burger",
         ingredients: "Beef Patty, Tomatoes, Mayo, Lettuce, Cheese",
-        price: 4.99,
+        price: 11.49,
         category: 'burger'
     },
     {
@@ -30,22 +54,6 @@ export const menu = [
         ingredients: "Coca Cola",
         price: 2.49,
         category: 'drinks'
-    },
-    {
-        type: "pizza",
-        image: require("../images/burger-pizza.png"),
-        label: "Burger Kingo",
-        ingredients: 'Gorgonzola, Mozzarella, Red Onions, Capers, Olives',
-        price: 15.49,
-        category: 'pizza'
-    },
-    {
-        type: "pizza",
-        image: require("../images/quattro-formaggi.png"),
-        label: "Quattro Formaggi",
-        ingredients: 'Gorgonzola, Mozzarella, Feta Cheese, Cheese',
-        price: 14.99,
-        category: 'pizza'
     },
     {
         type: "sandwich",
