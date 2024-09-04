@@ -22,14 +22,28 @@ export function Menu() {
         )
     }
 
+    const productsArr =[];
+
+    for (let i = 2; i < 8; i++) {
+        productsArr.push(menu[i]);
+    } 
+
     const menuProducts = () => {
         return (
-            menu.map(product => (
+            productsArr.map(product => (
                 <div className='menu-product'>
                     <img src={product.image} className='m-p-img'></img>
                     <div className='m-p-txt'>
                         <h2 className='m-p-h2'>{product.label}</h2>
                         <p className='m-p-p'>{product.ingredients}</p>
+                    </div>
+
+                    <div className='m-p-select-price'>
+                        <select className='m-p-select'>
+                            <option value="large">Large</option>
+                            <option value="medium">Medium</option>
+                            <option value="small">Small</option>
+                        </select>
                     </div>
                 </div>
             ))
