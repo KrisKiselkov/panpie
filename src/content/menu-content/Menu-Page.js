@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Nav } from '../Nav';
 import { menu } from '../Menu';
 
@@ -22,32 +22,49 @@ export function Menu() {
             ))
         )
     }
-
-
-    let productArray = menu.slice(2, 8);
-
-    // State to store the search value
-    const [searchValue, setSearchValue] = useState('');
     
-    // Ref to access the input element
+    
+    let productArray = menu.slice(2, 8);
+    
+    // States
+    const [searchValue, setSearchValue] = useState(''); //State to track the search value
+    const [prodArr, setProdArr] = useState(productArray); //State to track the array of products
+    const [category, setCategory] = useState(''); //State to track the active category
+    
+    // Ref to access the input element (Look over this again)
     const searchInputRef = useRef(null);
 
+    // function for tracking the search input value
     const handleSearch = (e) => {
         const value = e.target.value;
         setSearchValue(value);
         console.log(value);
     };
 
-    const filteredProducts = productArray.filter(product => 
-        product.label.toLowerCase().includes(searchValue)
-    );
+    // function to track the active category
+    const handleCategory = (type) => {
+        setCategory(type);
+    };
 
-    const numOfProd = filteredProducts.length;
+    // useEffect hook to update the products array according to the filters
+    useEffect(() => {
+        const filteredProducts = 
+            productArray.filter(product => {
+                const matchSearch = product.label.toLowerCase().includes(searchValue);
+                const matchCategory = category ? product.type === category : true;
+                return matchSearch && matchCategory; // Both conditions must be true
+            });
+        
+        setProdArr(filteredProducts); // updating the array
+    }, [searchValue, productArray, category]); // Ensure effect runs when searchValue or productArray changes
+
+    const numOfProd = prodArr.length; // tracking the number of products in the array 
     console.log(numOfProd)
     
+    // product card template
     const menuProducts = () => {
         return (
-            filteredProducts.map(product => (
+            prodArr.map(product => (
                 <div className='menu-product' key={product.id}>
                     <img src={product.image} className='m-p-img'></img>
                     <div className='m-p-viewoptions-wrap'>
@@ -110,13 +127,13 @@ export function Menu() {
                                         <h2 className='menu-col-h2'>Categories</h2>
                                     
                                         <div id='menu-all-categories'>
-                                            <div className='category-div'>
+                                            <label className='category-div' onClick={() => handleCategory("pizza")}>
                                                 <div className='category-order-setting'>
                                                     <input type='checkbox'></input>
                                                     <h3 className='category-h3'>Pizza</h3>
                                                 </div>
                                                 <p className='category-p'>(3)</p>
-                                            </div>
+                                            </label>
 
                                             <div className='category-div'>
                                                 <div className='category-order-setting'>
