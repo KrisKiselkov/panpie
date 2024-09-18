@@ -1,3 +1,4 @@
+import React, { useState, useRef } from 'react';
 import { Nav } from '../Nav';
 import { menu } from '../Menu';
 
@@ -22,35 +23,63 @@ export function Menu() {
         )
     }
 
-    const productsArr =[];
 
-    for (let i = 2; i < 8; i++) {
-        productsArr.push(menu[i]);
-    } 
+    let productArray = menu.slice(2, 8);
 
+    // State to store the search value
+    const [searchValue, setSearchValue] = useState('');
+    
+    // Ref to access the input element
+    const searchInputRef = useRef(null);
+
+    const handleSearch = (e) => {
+        const value = e.target.value;
+        setSearchValue(value);
+        console.log(value);
+    };
+
+    const filteredProducts = productArray.filter(product => 
+        product.label.toLowerCase().includes(searchValue)
+    );
+
+    const numOfProd = filteredProducts.length;
+    console.log(numOfProd)
+    
     const menuProducts = () => {
         return (
-            productsArr.map(product => (
-                <div className='menu-product'>
+            filteredProducts.map(product => (
+                <div className='menu-product' key={product.id}>
                     <img src={product.image} className='m-p-img'></img>
+                    <div className='m-p-viewoptions-wrap'>
+                        <div className='viewoptions-btn'>
+                            <p>View Options</p>
+                        </div>
+                    </div>
                     <div className='m-p-txt'>
                         <h2 className='m-p-h2'>{product.label}</h2>
                         <p className='m-p-p'>{product.ingredients}</p>
                     </div>
 
                     <div className='m-p-select-price'>
-                        <select className='m-p-select'>
-                            <option value="large">Large</option>
-                            <option value="medium">Medium</option>
-                            <option value="small">Small</option>
-                        </select>
+                        <div className='m-p-custom-select'>
+                            <select className='m-p-select'>
+                                <option value="large">Large</option>
+                                <option value="medium">Medium</option>
+                                <option value="small">Small</option>
+                            </select>
+                            <span className='c-s-arrow'>
+                                <b></b>
+                            </span>
+
+                            <span className='m-p-price'>${product.price}</span>
+                        </div>
                     </div>
                 </div>
             ))
         )
     }
 
-
+    
     return (
         <>
             <Nav />
@@ -69,7 +98,11 @@ export function Menu() {
                         <div id="menu-filter-col">
                             <div id='menu-filter-content'>
                                 <div id='menu-search-div'>
-                                    <input type='search' id='menu-search' placeholder='Search products...'></input>
+                                    <input type='search' id='menu-search' placeholder='Search products...'
+                                    value={searchValue}
+                                    ref={searchInputRef}
+                                    onChange={handleSearch}></input>
+                                    <button type='submit' id='menu-search-btn'>O</button>
                                 </div>
 
                                 <div id='menu-categories-div'>
@@ -145,7 +178,7 @@ export function Menu() {
 
                         <div id="menu-products-col">
                             <div id='menu-products-header'>
-                                <h3 id='m-p-h3'>Showing all 4 results</h3>
+                                <h3 id='m-p-h3'>Showing all {numOfProd} results</h3>
 
 
                             </div>

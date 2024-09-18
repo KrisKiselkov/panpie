@@ -7,7 +7,8 @@ export const menu = [
         price: 14.49,
         smallPrice: 9.99,
         largePrice: 18.99, 
-        category: 'pizza'
+        category: 'pizza',
+        id: 1
     },
     {
         type: "fries",
@@ -17,7 +18,8 @@ export const menu = [
         price: 6.99,
         smallPrice: 4.99,
         largePrice: 7.99, 
-        category: 'fries'
+        category: 'fries',
+        id: 2
     },
     {
         type: "pizza",
@@ -27,7 +29,8 @@ export const menu = [
         price: 15.49,
         smallPrice: 10.49,
         largePrice: 19.99, 
-        category: 'pizza'
+        category: 'pizza',
+        id: 3
     },
     {
         type: "pizza",
@@ -37,7 +40,8 @@ export const menu = [
         price: 14.99,
         smallPrice: 9.99,
         largePrice: 18.99, 
-        category: 'pizza'
+        category: 'pizza',
+        id: 4
     },
     {
         type: "burger",
@@ -45,7 +49,8 @@ export const menu = [
         label: "King Beef Burger",
         ingredients: "Beef Patty, Tomatoes, Mayo, Lettuce, Cheese",
         price: 11.49,
-        category: 'burger'
+        category: 'burger',
+        id: 5
     },
     {
         type: "drinks",
@@ -53,7 +58,8 @@ export const menu = [
         label: "Coca Cola",
         ingredients: "Coca Cola",
         price: 2.49,
-        category: 'drinks'
+        category: 'drinks',
+        id: 6
     },
     {
         type: "sandwich",
@@ -61,7 +67,8 @@ export const menu = [
         label: "Pollo Sandwich",
         ingredients: 'Chicken, Lettuce, Tomatoes, Cheese, Olives',
         price: 8.49,
-        category: 'sandwich'
+        category: 'sandwich',
+        id: 7
     },
     {
         type: "sandwich",
@@ -69,6 +76,7 @@ export const menu = [
         label: "Geometry Sandwich",
         ingredients: 'Ham, Cheese, Tomatoes, Lettuce',
         price: 9.49,
-        category: 'sandwich'
+        category: 'sandwich',
+        id: 8
     }
 ]
