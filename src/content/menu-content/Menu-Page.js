@@ -30,7 +30,13 @@ export function Menu() {
     // States
     const [searchValue, setSearchValue] = useState(''); //State to track the search value
     const [prodArr, setProdArr] = useState(productArray); //State to track the array of products
-    const [category, setCategory] = useState(''); //State to track the active category
+    const [category, setCategory] = useState({
+        pizza: false,
+        burger: false,
+        sandwich: false,
+        fries: false,
+        drinks: false
+    }); //State to track the active category
     
     // Ref to access the input element (Look over this again)
     const searchInputRef = useRef(null);
@@ -43,8 +49,11 @@ export function Menu() {
     };
 
     // function to track the active category
-    const handleCategory = (type) => {
-        setCategory(type);
+    const handleCategory = (categoryName, isChecked) => {
+        setCategory(prevState => ({
+            ...prevState,
+            [categoryName]: isChecked,
+        }));
     };
 
     // useEffect hook to update the products array according to the filters
@@ -52,8 +61,10 @@ export function Menu() {
         const filteredProducts = 
             productArray.filter(product => {
                 const matchSearch = product.label.toLowerCase().includes(searchValue);
-                const matchCategory = category ? product.type === category : true;
-                return matchSearch && matchCategory; // Both conditions must be true
+                const matchCategory = Object.keys(category).some((cat) => 
+                    category[cat] && product.type === cat
+                );
+                return matchSearch && (matchCategory || !Object.values(category).includes(true)); // Both conditions must be true
             });
         
         setProdArr(filteredProducts); // updating the array
@@ -127,45 +138,45 @@ export function Menu() {
                                         <h2 className='menu-col-h2'>Categories</h2>
                                     
                                         <div id='menu-all-categories'>
-                                            <label className='category-div' onChange={() => handleCategory("pizza")}>
+                                            <label className='category-div'>
                                                 <div className='category-order-setting'>
-                                                    <input type='checkbox'></input>
+                                                    <input type='checkbox' onChange={(e) => handleCategory('pizza', e.target.checked)}></input>
                                                     <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Pizza</h3>
                                                 </div>
                                                 <p className='category-p'>(3)</p>
                                             </label>
 
-                                            <label className='category-div' onClick={() => handleCategory("burger")}>
+                                            <label className='category-div'>
                                                 <div className='category-order-setting'>
-                                                    <input type='checkbox'></input>
+                                                    <input type='checkbox' onChange={(e) => handleCategory('burger', e.target.checked)}></input>
                                                     <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Burger</h3>
                                                 </div>
                                                 <p className='category-p'>(1)</p>
                                             </label>
 
-                                            <label className='category-div' onClick={() => handleCategory("sandwich")}>
+                                            <label className='category-div'>
                                                 <div className='category-order-setting'>
-                                                    <input type='checkbox'></input>
+                                                    <input type='checkbox' onChange={(e) => handleCategory('sandwich', e.target.checked)}></input>
                                                     <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Sandwich</h3>
                                                 </div>
                                                 <p className='category-p'>(2)</p>
                                             </label>
 
-                                            <label className='category-div' onClick={() => handleCategory("fries")}>
+                                            <label className='category-div'>
                                                 <div className='category-order-setting'>
-                                                    <input type='checkbox' className='category-check'></input>
+                                                    <input type='checkbox' onChange={(e) => handleCategory('fries', e.target.checked)}></input>
                                                     <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Fries</h3>
                                                 </div>
                                                 <p className='category-p'>(1)</p>
                                             </label>
 
-                                            <label className='category-div' onClick={() => handleCategory("drinks")}>
+                                            <label className='category-div'>
                                                 <div className='category-order-setting'>
-                                                    <input type='checkbox'></input>
+                                                    <input type='checkbox' onChange={(e) => handleCategory('drinks', e.target.checked)}></input>
                                                     <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Drinks</h3>
                                                 </div>
