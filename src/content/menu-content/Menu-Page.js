@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Nav } from '../Nav';
 import { menu } from '../Menu';
 
+
 export function Menu() {
     const bestArr =[];
 
@@ -24,7 +25,7 @@ export function Menu() {
     }
     
     
-    let productArray = menu.slice(2, 8);
+    let productArray = menu;
     
     // States
     const [searchValue, setSearchValue] = useState(''); //State to track the search value
@@ -56,10 +57,9 @@ export function Menu() {
             });
         
         setProdArr(filteredProducts); // updating the array
-    }, [searchValue, productArray, category]); // Ensure effect runs when searchValue or productArray changes
+    }, [searchValue, category]); // Ensure effect runs when searchValue or productArray changes
 
     const numOfProd = prodArr.length; // tracking the number of products in the array 
-    console.log(numOfProd)
     
     // product card template
     const menuProducts = () => {
@@ -127,45 +127,50 @@ export function Menu() {
                                         <h2 className='menu-col-h2'>Categories</h2>
                                     
                                         <div id='menu-all-categories'>
-                                            <label className='category-div' onClick={() => handleCategory("pizza")}>
+                                            <label className='category-div' onChange={() => handleCategory("pizza")}>
                                                 <div className='category-order-setting'>
                                                     <input type='checkbox'></input>
+                                                    <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Pizza</h3>
                                                 </div>
                                                 <p className='category-p'>(3)</p>
                                             </label>
 
-                                            <div className='category-div'>
+                                            <label className='category-div' onClick={() => handleCategory("burger")}>
                                                 <div className='category-order-setting'>
                                                     <input type='checkbox'></input>
+                                                    <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Burger</h3>
                                                 </div>
-                                                <p className='category-p'>(3)</p>
-                                            </div>
+                                                <p className='category-p'>(1)</p>
+                                            </label>
 
-                                            <div className='category-div'>
+                                            <label className='category-div' onClick={() => handleCategory("sandwich")}>
                                                 <div className='category-order-setting'>
                                                     <input type='checkbox'></input>
+                                                    <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Sandwich</h3>
                                                 </div>
-                                                <p className='category-p'>(3)</p>
-                                            </div>
+                                                <p className='category-p'>(2)</p>
+                                            </label>
 
-                                            <div className='category-div'>
+                                            <label className='category-div' onClick={() => handleCategory("fries")}>
                                                 <div className='category-order-setting'>
-                                                    <input type='checkbox'></input>
+                                                    <input type='checkbox' className='category-check'></input>
+                                                    <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Fries</h3>
                                                 </div>
-                                                <p className='category-p'>(3)</p>
-                                            </div>
+                                                <p className='category-p'>(1)</p>
+                                            </label>
 
-                                            <div className='category-div'>
+                                            <label className='category-div' onClick={() => handleCategory("drinks")}>
                                                 <div className='category-order-setting'>
                                                     <input type='checkbox'></input>
+                                                    <span class="checkmark"></span>
                                                     <h3 className='category-h3'>Drinks</h3>
                                                 </div>
-                                                <p className='category-p'>(3)</p>
-                                            </div>
+                                                <p className='category-p'>(1)</p>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>

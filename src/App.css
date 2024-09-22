@@ -983,6 +983,12 @@ nav h2 {
   justify-content: space-between;
 }
 
+.category-div:hover {
+  .category-h3 {
+    color: #f43127;
+  }
+}
+
 .category-div + .category-div::after {
   content: "";
   position: absolute;
@@ -995,10 +1001,66 @@ nav h2 {
   display: flex;
 }
 
+.category-div input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 21px;
+  left: .3em;
+  height: 17px;
+  width: 17px;
+  border: 1px solid #f43127;
+  border-radius: 4px;
+  transition: all .2s;
+}
+
+/* On mouse-over, add a grey background color */
+.category-div:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.category-div input:checked ~ .checkmark {
+  background-color: #f43127;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.category-div input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.category-div .checkmark:after {
+  left: 5px;
+  top: 1.8px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .category-h3 {
   position: relative;
-  left: .3em;
+  left: .7em;
   font-weight: 400;
+  transition: all .2s ease-out;
 }
 
 .category-p {
