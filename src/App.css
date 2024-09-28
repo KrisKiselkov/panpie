@@ -1154,6 +1154,11 @@ nav h2 {
   border-bottom: 1px solid #e0e0e0;
 }
 
+#m-p-h3 {
+  position: relative;
+  top: .7em;
+}
+
 
 #menu-products-container {
   position: relative;
@@ -1294,7 +1299,7 @@ nav h2 {
   border-radius: 30px;
   border: 1px solid #e0e0e0;
   background: #ffffff;
-  padding-left: 2.8em;
+  padding-left: 2.3em;
   font-size: 15px;
   color: #646464;
   font-weight: bold;
@@ -1306,7 +1311,7 @@ nav h2 {
   position: absolute;
   height: 36px;
   width: 32px;
-  right: 56.3px;
+  right: 67px;
   background: #fcb302;
   border-radius: 0 30px 30px 0;
   top: 0px;
@@ -1334,9 +1339,11 @@ option {
 }
 
 .m-p-price {
+  display: inline-block;
   position: relative;
   left: 2.3em;
   font-size: 22px;
   font-weight: bold;
   color: #f43127;
+  width: 3em;
 }

@@ -37,6 +37,12 @@ export function Menu() {
         fries: false,
         drinks: false
     }); //State to track the active category
+    const [productPrices, setProductPrices] = useState(
+        productArray.reduce((acc, product) => {
+            acc[product.id] = product.price; // default to medium price
+            return acc;
+        }, {})
+    );
     
     // Ref to access the input element (Look over this again)
     const searchInputRef = useRef(null);
@@ -45,7 +51,6 @@ export function Menu() {
     const handleSearch = (e) => {
         const value = e.target.value;
         setSearchValue(value);
-        console.log(value);
     };
 
     // function to track the active category
@@ -71,6 +76,22 @@ export function Menu() {
     }, [searchValue, category]); // Ensure effect runs when searchValue or productArray changes
 
     const numOfProd = prodArr.length; // tracking the number of products in the array 
+
+    const handlePrice = (product, priceSelect) => {
+        let newPrice;
+        if (priceSelect === 'large') {
+            newPrice = product.largePrice;
+        } else if (priceSelect === 'medium') {
+            newPrice = product.price;
+        } else {
+            newPrice = product.smallPrice;
+        };
+        
+        setProductPrices(prevPrices => ({
+            ...prevPrices,
+            [product.id]: newPrice
+        }));
+    };
     
     // product card template
     const menuProducts = () => {
@@ -90,16 +111,16 @@ export function Menu() {
 
                     <div className='m-p-select-price'>
                         <div className='m-p-custom-select'>
-                            <select className='m-p-select'>
-                                <option value="large">Large</option>
-                                <option value="medium">Medium</option>
-                                <option value="small">Small</option>
+                            <select className='m-p-select' onChange={(e) => handlePrice(product ,e.target.value)}>
+                                <option value="large"><p>Large</p></option>
+                                <option value="medium"><p>Medium</p></option>
+                                <option value="small"><p>Small</p></option>
                             </select>
                             <span className='c-s-arrow'>
                                 <b></b>
                             </span>
 
-                            <span className='m-p-price'>${product.price}</span>
+                            <div className='m-p-price'>${productPrices[product.id]}</div>
                         </div>
                     </div>
                 </div>
